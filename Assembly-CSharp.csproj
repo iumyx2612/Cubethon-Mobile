@@ -62,14 +62,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Coin.cs" />
-    <Compile Include="Assets\CoinData.cs" />
-    <Compile Include="Assets\Gate.cs" />
-    <Compile Include="Assets\Rotate.cs" />
     <Compile Include="Assets\Scripts\CameraScript.cs" />
+    <Compile Include="Assets\Scripts\Coin.cs" />
+    <Compile Include="Assets\Scripts\CoinData.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Scripts\Gate.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\PlayerStatus.cs" />
+    <Compile Include="Assets\Scripts\Rotate.cs" />
     <Compile Include="Assets\Scripts\Score.cs" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
