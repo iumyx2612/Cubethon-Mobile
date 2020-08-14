@@ -73,7 +73,7 @@ MonoBehaviour:
   m_MinSize: {x: 887, y: 494}
   m_MaxSize: {x: 16012, y: 14044}
   vertical: 0
-  controlID: 144
+  controlID: 80
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -458,19 +458,19 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/Prefabs
   m_ViewMode: 1
   m_StartGridSize: 54
   m_LastFolders:
-  - Assets
+  - Assets/Prefabs
   m_LastFoldersGridSize: 54
   m_LastProjectPath: E:\Work work\Unity 3D\Work\Cubethon on Mobile
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: c42c0000
-    m_LastClickedID: 11460
+    m_SelectedIDs: c02f0000
+    m_LastClickedID: 12224
     m_ExpandedIDs: 00000000c42c0000342d000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -526,7 +526,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c62300001c0c0000ca520000e451000000000000e2350000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -622,23 +622,23 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: 56310000
       m_LastClickedID: 0
       m_ExpandedIDs: 6afbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: Plane
+        m_OriginalName: Plane
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: 12428
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 5}
       m_SearchString: 
@@ -684,9 +684,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0, y: 0, z: 110.39}
+    m_Target: {x: 6.392798, y: -27.95528, z: 159.42108}
     speed: 2
-    m_Value: {x: 0, y: 0, z: 110.39}
+    m_Value: {x: 6.392798, y: -27.95528, z: 159.42108}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -717,11 +717,11 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: 0.29121706, y: 0.0051630563, z: -0.0015738057, w: 0.9566532}
     speed: 2
-    m_Value: {x: -0.29121703, y: -0.0051630563, z: 0.0015738056, w: -0.9566531}
+    m_Value: {x: 0.2912139, y: 0.0051630004, z: -0.0015737886, w: 0.9566428}
   m_Size:
-    m_Target: 221.91245
+    m_Target: 142.83916
     speed: 2
-    m_Value: 221.91245
+    m_Value: 142.83916
   m_Ortho:
     m_Target: 1
     speed: 2
