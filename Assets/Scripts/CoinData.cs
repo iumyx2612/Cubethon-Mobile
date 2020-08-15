@@ -8,6 +8,7 @@ public class CoinData : MonoBehaviour
     public int coinCounter;
     public int totalCoin;
     public Text coinText;
+    public Text totalcoinText;
 
     private void Start()
     {
@@ -17,6 +18,7 @@ public class CoinData : MonoBehaviour
     private void Update()
     {
         coinText.text = coinCounter.ToString();
+        totalcoinText.text = totalCoin.ToString();
     }
 
     public void SaveCoin()

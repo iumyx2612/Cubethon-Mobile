@@ -10,12 +10,14 @@ public class Score : MonoBehaviour
     public int maxScore = 200;
     private int oldPos;
     public int curScore;
+    private GameObject gate;
 
     // Start is called before the first frame update
     void Start()
     {        
         player = GameObject.FindGameObjectWithTag("Player");
         oldPos = (int)player.transform.position.z;
+        gate = GameObject.FindGameObjectWithTag("Gate");
     }
 
     // Update is called once per frame
@@ -30,7 +32,7 @@ public class Score : MonoBehaviour
     }
     public void LateUpdate()
     {
-        if (player.transform.position.z >= 200)
+        if (player.transform.position.z >= gate.transform.position.z)
         {
             score.text = maxScore.ToString("0");
         }
