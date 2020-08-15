@@ -21,6 +21,7 @@ public class Coin : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             FindObjectOfType<CoinData>().coinCounter += 1;
+            FindObjectOfType<CoinData>().totalCoin += 1;
             Destroy(gameObject);
         }
     }
