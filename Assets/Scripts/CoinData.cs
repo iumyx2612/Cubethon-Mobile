@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class CoinData : MonoBehaviour
 {
     public int coinCounter;
+    public int totalCoin;
     public Text coinText;
 
     private void Start()
@@ -16,5 +17,16 @@ public class CoinData : MonoBehaviour
     private void Update()
     {
         coinText.text = coinCounter.ToString();
+    }
+
+    public void SaveCoin()
+    {
+        SaveSystem.SaveCoin(this);
+    }
+
+    public void LoadCoin()
+    {
+        CoinCollected data = SaveSystem.LoadCoin();
+        totalCoin = data.coinCollected;
     }
 }

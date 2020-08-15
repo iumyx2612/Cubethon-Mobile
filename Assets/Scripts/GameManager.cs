@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        FindObjectOfType<CoinData>().LoadCoin();
         player = GameObject.FindGameObjectWithTag("Player");
         gameEnded = false;
     }    
@@ -38,6 +39,7 @@ public class GameManager : MonoBehaviour
     
     public void LevelCompleted()
     {
+        FindObjectOfType<CoinData>().SaveCoin();
         levelCompletePanel.SetActive(true);
         player.GetComponent<PlayerMovement>().enabled = false;
     }

@@ -9,6 +9,6 @@ public class CoinCollected
 
     public CoinCollected(CoinData coinData)
     {
-        coinCollected = coinData.coinCounter;
+        coinCollected = coinData.totalCoin;
     }
 }
