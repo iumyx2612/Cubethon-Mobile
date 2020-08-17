@@ -18,7 +18,7 @@ public class CoinData : MonoBehaviour
     private void Update()
     {
         coinText.text = coinCounter.ToString();
-        totalcoinText.text = totalCoin.ToString();
+        //totalcoinText.text = totalCoin.ToString();
     }
 
     public void SaveCoin()

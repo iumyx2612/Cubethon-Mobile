@@ -32,9 +32,13 @@ public class Score : MonoBehaviour
     }
     public void LateUpdate()
     {
-        if (player.transform.position.z >= gate.transform.position.z)
+        if(GameObject.Find("Gate") != null)
         {
-            score.text = maxScore.ToString("0");
+            if (player.transform.position.z >= gate.transform.position.z)
+            {
+                score.text = maxScore.ToString("0");
+            }
         }
+
     }
 }
