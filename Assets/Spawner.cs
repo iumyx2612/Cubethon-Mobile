@@ -8,7 +8,7 @@ public class Spawner : MonoBehaviour
     private GameObject player;
     private Vector3 playerPos;
     public GameObject planes;
-    private float PlaneZ = -100f;
+    private float totalLength = 0f;
     private float planeLength = 200;
     private int amountOfPlaneonScreen = 5;
     private List<GameObject> activePlanes;
@@ -28,7 +28,7 @@ public class Spawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(player.transform.position.z - 100f > (PlaneZ - amountOfPlaneonScreen * planeLength))
+        if(player.transform.position.z - 110f > (totalLength - amountOfPlaneonScreen * planeLength))
         {
             SpawnPlane();
             DeletePlane();
@@ -37,12 +37,11 @@ public class Spawner : MonoBehaviour
 
     void SpawnPlane()
     {
-        GameObject newplane = Instantiate(plane) as GameObject;
-        newplane.transform.SetParent(planes.transform);
-        newplane.transform.position = Vector3.forward * PlaneZ;
-        Debug.Log(newplane.transform.position);
-        PlaneZ += planeLength;
-        activePlanes.Add(newplane);
+        GameObject newPlane = Instantiate(plane);
+        newPlane.transform.SetParent(planes.transform);
+        newPlane.transform.position = new Vector3(0, 0, 1) * totalLength;
+        totalLength += planeLength;
+        activePlanes.Add(newPlane);
     }
 
     void DeletePlane()
