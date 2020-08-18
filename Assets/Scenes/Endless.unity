@@ -1176,6 +1176,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1627203357410752703, guid: 25ada2c367ec29144baa40fb4eedde51,
         type: 3}
+      propertyPath: obstacleSet.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1627203357410752703, guid: 25ada2c367ec29144baa40fb4eedde51,
+        type: 3}
       propertyPath: planes
       value: 
       objectReference: {fileID: 316587014}
@@ -1194,6 +1199,54 @@ PrefabInstance:
       propertyPath: max_distance_btw_obstacleset
       value: 80
       objectReference: {fileID: 0}
+    - target: {fileID: 1627203357410752703, guid: 25ada2c367ec29144baa40fb4eedde51,
+        type: 3}
+      propertyPath: obstacleSet.Array.data[0]
+      value: 
+      objectReference: {fileID: 7942556353524373719, guid: 32ff409f236cc0a4caadac623ac3ed9b,
+        type: 3}
+    - target: {fileID: 1627203357410752703, guid: 25ada2c367ec29144baa40fb4eedde51,
+        type: 3}
+      propertyPath: obstacleSet.Array.data[1]
+      value: 
+      objectReference: {fileID: 5262718437062266124, guid: fcb0126e7d69d564d9d6d22ccc9990c9,
+        type: 3}
+    - target: {fileID: 1627203357410752703, guid: 25ada2c367ec29144baa40fb4eedde51,
+        type: 3}
+      propertyPath: obstacleSet.Array.data[2]
+      value: 
+      objectReference: {fileID: 426745530894340507, guid: 194b72a8be4a37a418847ff84e1d1a99,
+        type: 3}
+    - target: {fileID: 1627203357410752703, guid: 25ada2c367ec29144baa40fb4eedde51,
+        type: 3}
+      propertyPath: obstacleSet.Array.data[3]
+      value: 
+      objectReference: {fileID: 4901212258853355515, guid: c46e9fe85276a6a4c9e7ad3cf5c7efd3,
+        type: 3}
+    - target: {fileID: 1627203357410752703, guid: 25ada2c367ec29144baa40fb4eedde51,
+        type: 3}
+      propertyPath: obstacleSet.Array.data[4]
+      value: 
+      objectReference: {fileID: 2729944611140371530, guid: 8c206ca371310404ab6704de40f55505,
+        type: 3}
+    - target: {fileID: 1627203357410752703, guid: 25ada2c367ec29144baa40fb4eedde51,
+        type: 3}
+      propertyPath: obstacleSet.Array.data[5]
+      value: 
+      objectReference: {fileID: 7526316320119887450, guid: b12e0f6d492fd954da7f482f8a27c714,
+        type: 3}
+    - target: {fileID: 1627203357410752703, guid: 25ada2c367ec29144baa40fb4eedde51,
+        type: 3}
+      propertyPath: obstacleSet.Array.data[6]
+      value: 
+      objectReference: {fileID: 481044034690117087, guid: fbf802b4a7559444c97a54548edad0c7,
+        type: 3}
+    - target: {fileID: 1627203357410752703, guid: 25ada2c367ec29144baa40fb4eedde51,
+        type: 3}
+      propertyPath: obstacleSet.Array.data[7]
+      value: 
+      objectReference: {fileID: 3672173126012112091, guid: c295c7a49fc3e8c4a89d9fb566bd7754,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 25ada2c367ec29144baa40fb4eedde51, type: 3}
 --- !u!1001 &2138919247530436035

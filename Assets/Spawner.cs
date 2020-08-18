@@ -39,7 +39,7 @@ public class Spawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (player.transform.position.z - 110f > (totalLength - amountOfPlaneonScreen * planeLength))
+        if (player.transform.position.z - 150f > (totalLength - amountOfPlaneonScreen * planeLength))
         {
             SpawnPlane();
             DeletePlane();
@@ -57,31 +57,23 @@ public class Spawner : MonoBehaviour
         while (obstacle_set_length < totalLength)
         {
             GameObject new_obstacle_set;
-            int random_obstacle = (int)Random.Range(0, obstacleSet.Length);
-            if (random_obstacle == 0 || random_obstacle == 1)
-            {
-                float min_x = -5.6f;
-                float max_x = 5.6f;
-                new_obstacle_set = Instantiate(obstacleSet[random_obstacle], new Vector3(Random.Range(min_x, max_x), -0.5f, transform.position.z), Quaternion.identity);
-                Debug.Log(new_obstacle_set.transform.position);
-            }
-            else
-            {
-                new_obstacle_set = Instantiate(obstacleSet[random_obstacle]);
-            }
-            new_obstacle_set.transform.SetParent(obstacleContainer.transform);
+            new_obstacle_set = Instantiate(obstacleSet[Random.Range(0, obstacleSet.Length)]);            
+            new_obstacle_set.transform.SetParent(newPlane.transform);
             new_obstacle_set.transform.position = Vector3.forward * obstacle_set_length;
             obstacle_set_length += GenerateDistance();
+            activeObstacles.Add(new_obstacle_set);
         }
-
-
-
     }
 
     void DeletePlane()
     {
         Destroy(activePlanes[0]);
-        activePlanes.RemoveAt(0);
+        activePlanes.RemoveAt(0);        
+    }
+
+    void DeleteObstacles()
+    {
+
     }
 
     float GenerateDistance()
