@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1627203357410752702
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1627203357410752688}
+  - component: {fileID: 1627203357410752703}
+  m_Layer: 0
+  m_Name: Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1627203357410752688
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1627203357410752702}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1627203357410752703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1627203357410752702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 158bca6b9fd887d46b306af54977771b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  plane: {fileID: 1784313743330195079, guid: cc6f9ca9531ad7e4c9fc84695cb11fd0, type: 3}
+  planes: {fileID: 0}
+  obstacleSet:
+  - {fileID: 2737554100311415309, guid: bc5563770fb5ef24296edee201a4f05d, type: 3}
+  - {fileID: 1276796731423557274, guid: 57078a192f1ba154e9b8a2078d885f31, type: 3}
+  - {fileID: 7942556353524373719, guid: 32ff409f236cc0a4caadac623ac3ed9b, type: 3}
+  - {fileID: 5262718437062266124, guid: fcb0126e7d69d564d9d6d22ccc9990c9, type: 3}
+  - {fileID: 426745530894340507, guid: 194b72a8be4a37a418847ff84e1d1a99, type: 3}
+  - {fileID: 4901212258853355515, guid: c46e9fe85276a6a4c9e7ad3cf5c7efd3, type: 3}
+  - {fileID: 2729944611140371530, guid: 8c206ca371310404ab6704de40f55505, type: 3}
+  - {fileID: 7526316320119887450, guid: b12e0f6d492fd954da7f482f8a27c714, type: 3}
+  - {fileID: 481044034690117087, guid: fbf802b4a7559444c97a54548edad0c7, type: 3}
+  - {fileID: 3672173126012112091, guid: c295c7a49fc3e8c4a89d9fb566bd7754, type: 3}
+  min_distance_btw_obstacleset: 20
+  max_distance_btw_obstacleset: 40
+  amount_of_obstacleset_on_scr: 10
