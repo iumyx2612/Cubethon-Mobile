@@ -28,12 +28,16 @@ public class GameManager : MonoBehaviour
         if(gameEnded == false)
         {
             gameEnded = true;
-            Restart();
         }
+        Debug.Log("you're dead");
     }
 
     public void Restart()
-    {        
+    {
+        if (gameEnded == false)
+        {
+            gameEnded = true;
+        }
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
     

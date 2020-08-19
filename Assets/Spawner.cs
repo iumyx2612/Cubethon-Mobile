@@ -54,12 +54,8 @@ public class Spawner : MonoBehaviour
         totalLength += planeLength;
         activePlanes.Add(newPlane);
 
-
-
         while (obstacle_set_length + 100 < totalLength)
         {
-            Debug.Log("Obs:" + obstacle_set_length);
-            Debug.Log("Total:" + totalLength);
             GameObject new_obstacle_set;
             new_obstacle_set = Instantiate(obstacleSet[Random.Range(0, obstacleSet.Length)]);            
             new_obstacle_set.transform.SetParent(newPlane.transform);

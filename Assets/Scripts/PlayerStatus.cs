@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerStatus : MonoBehaviour
 {
@@ -26,8 +27,14 @@ public class PlayerStatus : MonoBehaviour
     {
         if(collision.collider.CompareTag("Obstacles"))
         {
-            FindObjectOfType<Score>().curScore -= 20;
-            FindObjectOfType<Score>().maxScore -= 20;
+            if(SceneManager.GetActiveScene().name != "Endless")
+            {
+                FindObjectOfType<GameManager>().Restart();
+            }
+            else
+            {
+                FindObjectOfType<GameManager>().EndGame();
+            }
         }
     }
 }
