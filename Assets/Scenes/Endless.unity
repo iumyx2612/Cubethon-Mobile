@@ -1247,6 +1247,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3672173126012112091, guid: c295c7a49fc3e8c4a89d9fb566bd7754,
         type: 3}
+    - target: {fileID: 1627203357410752703, guid: 25ada2c367ec29144baa40fb4eedde51,
+        type: 3}
+      propertyPath: amount_of_obstacleset_on_scr
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 25ada2c367ec29144baa40fb4eedde51, type: 3}
 --- !u!1001 &2138919247530436035
