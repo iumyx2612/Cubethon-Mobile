@@ -36,14 +36,13 @@ public class TouchPlayerMovement : MonoBehaviour
                 case TouchPhase.Began:
                     if (touch.position.x < screenWidth / 2)
                     {
-                        Vector3 leftInput = new Vector3(-1f, 0, 0);
                         if (rb.velocity.magnitude < maxspeed)
                         {
-                            rb.MovePosition(rb.position + leftInput * sideWaySpeed[0] * Time.deltaTime);
+                            rb.MovePosition(rb.position + Vector3.left * sideWaySpeed[0] * Time.deltaTime);
                         }
                         else
                         {
-                            rb.MovePosition(rb.position + leftInput * sideWaySpeed[1] * Time.deltaTime);
+                            rb.MovePosition(rb.position + Vector3.left * sideWaySpeed[1] * Time.deltaTime);
                         }
                     }
                     else if (touch.position.x > screenWidth / 2)
@@ -51,17 +50,14 @@ public class TouchPlayerMovement : MonoBehaviour
                         Vector3 rightInput = new Vector3(1f, 0, 0);
                         if (rb.velocity.magnitude < maxspeed)
                         {
-                            rb.MovePosition(rb.position + rightInput * sideWaySpeed[0] * Time.deltaTime);
+                            rb.MovePosition(rb.position + Vector3.right * sideWaySpeed[0] * Time.deltaTime);
                         }
                         else
                         {
-                            rb.MovePosition(rb.position + rightInput * sideWaySpeed[1] * Time.deltaTime);
+                            rb.MovePosition(rb.position + Vector3.right * sideWaySpeed[1] * Time.deltaTime);
                         }
                     }
-                    break;
-                case TouchPhase.Ended:
-                    rb.velocity = new Vector3(0, 0, 0);
-                    break;
+                    break;                
             }
         }
     } 

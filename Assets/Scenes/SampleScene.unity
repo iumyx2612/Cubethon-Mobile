@@ -2205,6 +2205,16 @@ PrefabInstance:
       propertyPath: sideWaySpeed.Array.data[1]
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 2138919247860258182, guid: 68fce403b415c7b4d9fe2094667034c0,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 275391779310152695, guid: 68fce403b415c7b4d9fe2094667034c0,
+        type: 3}
+      propertyPath: sideWaySpeed.Array.data[1]
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68fce403b415c7b4d9fe2094667034c0, type: 3}
 --- !u!1001 &3131971532232291878
