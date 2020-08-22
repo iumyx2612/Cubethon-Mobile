@@ -11,6 +11,8 @@ public class PlayerMovement : MonoBehaviour
     private float maxspeed;
     [SerializeField]
     private float[] sideWaySpeed;
+    [SerializeField]
+    private float maxSideWaySpeed;
 
     // Start is called before the first frame update
     void Start()

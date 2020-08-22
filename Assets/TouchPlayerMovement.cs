@@ -11,6 +11,9 @@ public class TouchPlayerMovement : MonoBehaviour
     private float maxspeed;
     [SerializeField]
     private float[] sideWaySpeed;
+    [SerializeField]
+    private float maxSideWaySpeed;
+
     private float screenWidth;
 
     // Start is called before the first frame update
@@ -28,34 +31,40 @@ public class TouchPlayerMovement : MonoBehaviour
         {
             rb.velocity = rb.velocity.normalized * maxspeed;
         }
-        Debug.Log(rb.velocity.magnitude);
-        Vector3 deltaPosition = transform.forward * Time.deltaTime;
+        Debug.Log(rb.velocity.x);
         if (Input.touchCount > 0)
         {
             Vector3 touchPosition = Input.GetTouch(0).position;
             if (touchPosition.x > screenWidth / 2)
             {
-                if (rb.velocity.magnitude < maxspeed)
+                if (Mathf.Abs(rb.velocity.x) >= maxSideWaySpeed)
                 {
-                    deltaPosition += transform.right * sideWaySpeed[0] * Time.deltaTime;
+                    return;
+                }
+                if (rb.velocity.magnitude < maxspeed * 0.8f)
+                {
+                    rb.AddForce(sideWaySpeed[0] * Time.deltaTime, 0, 0);
                 }
                 else
                 {
-                    deltaPosition += transform.right * sideWaySpeed[1] * Time.deltaTime;
+                    rb.AddForce(sideWaySpeed[1] * Time.deltaTime, 0, 0);
                 }
             }
             else
             {
-                if (rb.velocity.magnitude < maxspeed)
+                if (Mathf.Abs(rb.velocity.x) >= maxSideWaySpeed)
                 {
-                    deltaPosition -= transform.right * sideWaySpeed[0] * Time.deltaTime;
+                    return;
+                }
+                if (rb.velocity.magnitude < maxspeed * 0.8f)
+                {
+                    rb.AddForce(-sideWaySpeed[0] * Time.deltaTime, 0, 0);
                 }
                 else
                 {
-                    deltaPosition -= transform.right * sideWaySpeed[1] * Time.deltaTime;
+                    rb.AddForce(-sideWaySpeed[1] * Time.deltaTime, 0, 0);
                 }
             }
         }
-        transform.position += deltaPosition * Time.deltaTime;
     }
 }

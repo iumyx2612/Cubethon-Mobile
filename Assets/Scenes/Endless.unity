@@ -186,7 +186,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -77.2, y: -21.4}
+  m_AnchoredPosition: {x: -77.20001, y: -21.400024}
   m_SizeDelta: {x: 25.25, y: 36.20999}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &419757832
@@ -1335,6 +1335,21 @@ PrefabInstance:
         type: 3}
       propertyPath: sideWaySpeed.Array.data[1]
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 275391779310152695, guid: 68fce403b415c7b4d9fe2094667034c0,
+        type: 3}
+      propertyPath: maxSideWaySpeed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 275391779310152695, guid: 68fce403b415c7b4d9fe2094667034c0,
+        type: 3}
+      propertyPath: sideWaySpeed.Array.data[0]
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 275391779310152695, guid: 68fce403b415c7b4d9fe2094667034c0,
+        type: 3}
+      propertyPath: sideWaySpeed.Array.data[1]
+      value: 700
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68fce403b415c7b4d9fe2094667034c0, type: 3}

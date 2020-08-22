@@ -129,6 +129,7 @@ MonoBehaviour:
   sideWaySpeed:
   - 10
   - 15
+  maxSideWaySpeed: 0
 --- !u!114 &1421066530991501866
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -156,5 +157,6 @@ MonoBehaviour:
   speed: 1000
   maxspeed: 40
   sideWaySpeed:
-  - 10
-  - 15
+  - 1000
+  - 3000
+  maxSideWaySpeed: 20

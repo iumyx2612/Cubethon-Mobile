@@ -2213,12 +2213,17 @@ PrefabInstance:
     - target: {fileID: 275391779310152695, guid: 68fce403b415c7b4d9fe2094667034c0,
         type: 3}
       propertyPath: sideWaySpeed.Array.data[1]
-      value: 700
+      value: 1200
       objectReference: {fileID: 0}
     - target: {fileID: 275391779310152695, guid: 68fce403b415c7b4d9fe2094667034c0,
         type: 3}
       propertyPath: sideWaySpeed.Array.data[0]
       value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 275391779310152695, guid: 68fce403b415c7b4d9fe2094667034c0,
+        type: 3}
+      propertyPath: maxSideWaySpeed
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68fce403b415c7b4d9fe2094667034c0, type: 3}
@@ -2373,6 +2378,12 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 25
       objectReference: {fileID: 0}
+    - target: {fileID: 3046074798833374889, guid: cc6f9ca9531ad7e4c9fc84695cb11fd0,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 0a2656fe83557774da92ecc7583bae8c,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc6f9ca9531ad7e4c9fc84695cb11fd0, type: 3}
 --- !u!1001 &4227688238710190768
