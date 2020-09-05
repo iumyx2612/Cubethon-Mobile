@@ -31,7 +31,6 @@ public class TouchPlayerMovement : MonoBehaviour
         {
             rb.velocity = rb.velocity.normalized * maxspeed;
         }
-        Debug.Log(rb.velocity.x);
         if (Input.touchCount > 0)
         {
             Vector3 touchPosition = Input.GetTouch(0).position;

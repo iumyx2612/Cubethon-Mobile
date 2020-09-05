@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Application.targetFrameRate = 60;
         FindObjectOfType<CoinData>().LoadCoin();
         player = GameObject.FindGameObjectWithTag("Player");
         gameEnded = false;
@@ -20,7 +21,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Dead();
+        
     }
 
     public void EndGame()
@@ -29,7 +30,6 @@ public class GameManager : MonoBehaviour
         {
             gameEnded = true;
         }
-        Debug.Log("you're dead");
     }
 
     public void Restart()
@@ -46,5 +46,6 @@ public class GameManager : MonoBehaviour
         FindObjectOfType<CoinData>().SaveCoin();
         levelCompletePanel.SetActive(true);
         player.GetComponent<PlayerMovement>().enabled = false;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }

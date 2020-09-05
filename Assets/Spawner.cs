@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
+    private GameObject player;
+
     public GameObject plane; 
     public GameObject planes;
     private float totalLength = 0f;
     private float planeLength = 200;
     private int amountOfPlaneonScreen = 5;
     private List<GameObject> activePlanes;
-
-    private GameObject player;
 
     public GameObject[] obstacleSet;
     public GameObject obstacleContainer;
@@ -60,6 +60,7 @@ public class Spawner : MonoBehaviour
             new_obstacle_set = Instantiate(obstacleSet[Random.Range(0, obstacleSet.Length)]);            
             new_obstacle_set.transform.SetParent(newPlane.transform);
             new_obstacle_set.transform.position = Vector3.forward * obstacle_set_length;
+
             obstacle_set_length += GenerateDistance();
             activeObstacles.Add(new_obstacle_set);
         }
@@ -74,7 +75,15 @@ public class Spawner : MonoBehaviour
     float GenerateDistance()
     {
         float temp;
-        temp = Random.Range(min_distance_btw_obstacleset, max_distance_btw_obstacleset);
+        if(player.transform.position.z <= 400)
+        {
+            temp = max_distance_btw_obstacleset;
+        }
+        else
+        {
+            temp = Random.Range(min_distance_btw_obstacleset, max_distance_btw_obstacleset);
+        }
+        
         return temp;
     }
 }
