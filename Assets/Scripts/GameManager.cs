@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        GameStart();
     }
 
     public void EndGame()
@@ -34,18 +34,23 @@ public class GameManager : MonoBehaviour
 
     public void Restart()
     {
-        if (gameEnded == false)
-        {
-            gameEnded = true;
-        }
+        EndGame();
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
     
-    public void LevelCompleted()
+    public void GameStart()
     {
-        FindObjectOfType<CoinData>().SaveCoin();
-        levelCompletePanel.SetActive(true);
-        player.GetComponent<PlayerMovement>().enabled = false;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        if(SceneManager.GetActiveScene().name == "Main Menu")
+        {
+            if (Input.touchCount > 0)
+            {
+                Touch touch = Input.GetTouch(0);
+                if (touch.phase == TouchPhase.Began)
+                {
+                    SceneManager.LoadScene("Main Scene");
+                }
+            }
+        }
+
     }
 }

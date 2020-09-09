@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class CoinData : MonoBehaviour
 {
@@ -17,8 +18,14 @@ public class CoinData : MonoBehaviour
 
     private void Update()
     {
-        coinText.text = coinCounter.ToString();
-        //totalcoinText.text = totalCoin.ToString();
+        if(SceneManager.GetActiveScene().name != "Main Menu")
+        {
+            coinText.text = coinCounter.ToString();
+        }
+        else
+        {
+            totalcoinText.text = totalCoin.ToString();
+        }
     }
 
     public void SaveCoin()

@@ -9,7 +9,7 @@ public static class SaveSystem
     public static void SaveCoin(CoinData coinData)
     {
         BinaryFormatter formatter = new BinaryFormatter();
-        string path = Application.persistentDataPath + "/coin.thuong";
+        string path = Path.Combine(Application.persistentDataPath, "coin.Thuong");
 
         FileStream stream = new FileStream(path, FileMode.Create);
 
@@ -21,7 +21,7 @@ public static class SaveSystem
 
     public static CoinCollected LoadCoin()
     {
-        string path = Application.persistentDataPath + "/coin.thuong";
+        string path = Path.Combine(Application.persistentDataPath, "coin.Thuong");
         if (File.Exists(path))
         {
             BinaryFormatter formatter = new BinaryFormatter();

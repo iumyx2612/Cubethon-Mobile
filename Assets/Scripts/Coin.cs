@@ -22,6 +22,7 @@ public class Coin : MonoBehaviour
         {
             FindObjectOfType<CoinData>().coinCounter += 1;
             FindObjectOfType<CoinData>().totalCoin += 1;
+            FindObjectOfType<CoinData>().SaveCoin();
             Destroy(gameObject);
         }
     }

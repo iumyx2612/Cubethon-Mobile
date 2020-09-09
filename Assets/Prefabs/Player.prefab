@@ -157,6 +157,6 @@ MonoBehaviour:
   speed: 1000
   maxspeed: 40
   sideWaySpeed:
-  - 1000
-  - 3000
+  - 2000
+  - 5000
   maxSideWaySpeed: 20
