@@ -9,6 +9,7 @@ public class CoinData : MonoBehaviour
     public int coinCounter;
     public int totalCoin;
     public Text coinText;
+    public Text coinTextInPanel;
     public Text totalcoinText;
 
     private void Start()
@@ -21,6 +22,7 @@ public class CoinData : MonoBehaviour
         if(SceneManager.GetActiveScene().name != "Main Menu")
         {
             coinText.text = coinCounter.ToString();
+            coinTextInPanel.text = coinCounter.ToString();
         }
         else
         {

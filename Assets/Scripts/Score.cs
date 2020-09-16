@@ -7,17 +7,18 @@ public class Score : MonoBehaviour
 {
     private GameObject player;
     public Text score;
-    public int maxScore = 200;
+    public Text highScore;
+    public Text scoreInPanel;
     private int oldPos;
     public int curScore;
-    private GameObject gate;
 
     // Start is called before the first frame update
     void Start()
     {        
         player = GameObject.FindGameObjectWithTag("Player");
         oldPos = (int)player.transform.position.z;
-        gate = GameObject.FindGameObjectWithTag("Gate");
+        highScore.text = PlayerPrefs.GetInt("HighScore", 0).ToString();
+        scoreInPanel.text = PlayerPrefs.GetInt("CurrentScore", 0).ToString();
     }
 
     // Update is called once per frame
@@ -28,17 +29,11 @@ public class Score : MonoBehaviour
         score.text = curScore.ToString("0");
 
         oldPos = (int)player.transform.position.z;
-        
-    }
-    public void LateUpdate()
-    {
-        if(GameObject.Find("Gate") != null)
+        PlayerPrefs.SetInt("CurrentScore", curScore);
+        if(curScore > PlayerPrefs.GetInt("HighScore", 0))
         {
-            if (player.transform.position.z >= gate.transform.position.z)
-            {
-                score.text = maxScore.ToString("0");
-            }
+            PlayerPrefs.SetInt("HighScore", curScore);
+            highScore.text = curScore.ToString();
         }
-
     }
 }

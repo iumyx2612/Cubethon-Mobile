@@ -7,13 +7,16 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     private bool gameEnded = false;
-    public GameObject levelCompletePanel;
+    public GameObject gameOverPanel;
+    public GameObject coinShowPanel;
     private GameObject player;
+    public GameObject scoreText;
 
     // Start is called before the first frame update
     void Start()
     {
         Application.targetFrameRate = 60;
+        Time.timeScale = 1f;
         FindObjectOfType<CoinData>().LoadCoin();
         player = GameObject.FindGameObjectWithTag("Player");
         gameEnded = false;
@@ -30,12 +33,21 @@ public class GameManager : MonoBehaviour
         {
             gameEnded = true;
         }
+        Time.timeScale = 0f;
     }
 
     public void Restart()
     {
         EndGame();
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void GameOver()
+    {
+        EndGame();
+        scoreText.SetActive(false);
+        coinShowPanel.SetActive(false);
+        gameOverPanel.SetActive(true);
     }
     
     public void GameStart()

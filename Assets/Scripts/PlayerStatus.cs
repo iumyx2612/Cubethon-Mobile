@@ -19,7 +19,7 @@ public class PlayerStatus : MonoBehaviour
     {
         if(gameObject.transform.position.y <= -15)
         {            
-            FindObjectOfType<GameManager>().Restart();
+            FindObjectOfType<GameManager>().GameOver();
         }
     }
 
@@ -27,14 +27,8 @@ public class PlayerStatus : MonoBehaviour
     {
         if(collision.collider.CompareTag("Obstacles"))
         {
-            if(SceneManager.GetActiveScene().name != "Endless")
-            {
-                FindObjectOfType<GameManager>().Restart();
-            }
-            else
-            {
-                FindObjectOfType<GameManager>().EndGame();
-            }
+            Destroy(gameObject);
+            FindObjectOfType<GameManager>().GameOver();
         }
     }
 }
