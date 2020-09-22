@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class PlayerStatus : MonoBehaviour
 {
     private Rigidbody rb;
+    public GameObject deathParticle;
     
 
     // Start is called before the first frame update
@@ -27,6 +28,7 @@ public class PlayerStatus : MonoBehaviour
     {
         if(collision.collider.CompareTag("Obstacles"))
         {
+            Instantiate(deathParticle, transform.position,Quaternion.identity);
             Destroy(gameObject);
             FindObjectOfType<GameManager>().GameOver();
         }

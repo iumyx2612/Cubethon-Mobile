@@ -1,9 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class Coin : MonoBehaviour
 {
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +26,8 @@ public class Coin : MonoBehaviour
             FindObjectOfType<CoinData>().coinCounter += 1;
             FindObjectOfType<CoinData>().totalCoin += 1;
             FindObjectOfType<CoinData>().SaveCoin();
+            Debug.Log("Coin");
+            FindObjectOfType<AudioManager>().Play("Coinpickup");
             Destroy(gameObject);
         }
     }

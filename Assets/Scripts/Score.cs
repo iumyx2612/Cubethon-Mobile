@@ -24,16 +24,20 @@ public class Score : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        int newPos = (int)player.transform.position.z;
-        curScore += newPos - oldPos;
-        score.text = curScore.ToString("0");
-
-        oldPos = (int)player.transform.position.z;
-        PlayerPrefs.SetInt("CurrentScore", curScore);
-        if(curScore > PlayerPrefs.GetInt("HighScore", 0))
+        if(player != null)
         {
-            PlayerPrefs.SetInt("HighScore", curScore);
-            highScore.text = curScore.ToString();
+            int newPos = (int)player.transform.position.z;
+            curScore += newPos - oldPos;
+            score.text = curScore.ToString("0");
+
+            oldPos = (int)player.transform.position.z;
+            PlayerPrefs.SetInt("CurrentScore", curScore);
+            if (curScore > PlayerPrefs.GetInt("HighScore", 0))
+            {
+                PlayerPrefs.SetInt("HighScore", curScore);
+                highScore.text = curScore.ToString();
+            }
         }
+        
     }
 }

@@ -110,7 +110,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 16
+  m_Constraints: 112
   m_CollisionDetection: 1
 --- !u!114 &2138919247860258182
 MonoBehaviour:
@@ -142,6 +142,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df687a00538bb1f4da5d0270aca62396, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathParticle: {fileID: 576392220166496049, guid: e53f1e26559bc5845a30b047c67e3d01,
+    type: 3}
 --- !u!114 &275391779310152695
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -157,6 +159,6 @@ MonoBehaviour:
   speed: 1000
   maxspeed: 40
   sideWaySpeed:
-  - 2000
-  - 5000
+  - 1000
+  - 2500
   maxSideWaySpeed: 20

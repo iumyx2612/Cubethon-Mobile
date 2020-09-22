@@ -17,6 +17,9 @@ public class CameraScript : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        gameObject.transform.position = player.transform.position + bias;
+        if(player != null)
+        {
+            gameObject.transform.position = player.transform.position + bias;
+        }
     }
 }
