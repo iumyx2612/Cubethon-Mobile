@@ -611,20 +611,24 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\AudioManager.cs" />
     <Compile Include="Assets\Scripts\CameraScript.cs" />
     <Compile Include="Assets\Scripts\Coin.cs" />
     <Compile Include="Assets\Scripts\CoinCollected.cs" />
     <Compile Include="Assets\Scripts\CoinData.cs" />
+    <Compile Include="Assets\Scripts\DeathMenuUI.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\Gate.cs" />
+    <Compile Include="Assets\Scripts\Home Canvas.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\PlayerStatus.cs" />
     <Compile Include="Assets\Scripts\Rotate.cs" />
     <Compile Include="Assets\Scripts\SaveSystem.cs" />
     <Compile Include="Assets\Scripts\Score.cs" />
-    <Compile Include="Assets\Spawner.cs" />
-    <Compile Include="Assets\TestScript.cs" />
-    <Compile Include="Assets\TouchPlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\Sound.cs" />
+    <Compile Include="Assets\Scripts\Spawner.cs" />
+    <Compile Include="Assets\Scripts\TestScript.cs" />
+    <Compile Include="Assets\Scripts\TouchPlayerMovement.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />

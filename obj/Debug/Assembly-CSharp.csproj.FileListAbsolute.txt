@@ -256,3 +256,14 @@ E:\Work work\Unity 3D\Work\Cubethon on Mobile\obj\Debug\Assembly-CSharp.csproj.C
 E:\Work work\Unity 3D\Work\Cubethon on Mobile\obj\Debug\Assembly-CSharp.csproj.CopyComplete
 E:\Work work\Unity 3D\Work\Cubethon on Mobile\obj\Debug\Assembly-CSharp.dll
 E:\Work work\Unity 3D\Work\Cubethon on Mobile\obj\Debug\Assembly-CSharp.pdb
+E:\Work work\Unity 3D\Work\Cubethon on Mobile\Temp\bin\Debug\UnityEditor.iOS.Extensions.Common.dll
+E:\Work work\Unity 3D\Work\Cubethon on Mobile\Temp\bin\Debug\UnityEditor.iOS.Extensions.Xcode.dll
+E:\Work work\Unity 3D\Work\Cubethon on Mobile\Temp\bin\Debug\Unity.Timeline.Editor.pdb
+E:\Work work\Unity 3D\Work\Cubethon on Mobile\Temp\bin\Debug\Unity.VSCode.Editor.pdb
+E:\Work work\Unity 3D\Work\Cubethon on Mobile\Temp\bin\Debug\Unity.TextMeshPro.Editor.pdb
+E:\Work work\Unity 3D\Work\Cubethon on Mobile\Temp\bin\Debug\UnityEngine.UI.pdb
+E:\Work work\Unity 3D\Work\Cubethon on Mobile\Temp\bin\Debug\Unity.Timeline.pdb
+E:\Work work\Unity 3D\Work\Cubethon on Mobile\Temp\bin\Debug\Unity.CollabProxy.Editor.pdb
+E:\Work work\Unity 3D\Work\Cubethon on Mobile\Temp\bin\Debug\Unity.Rider.Editor.pdb
+E:\Work work\Unity 3D\Work\Cubethon on Mobile\Temp\bin\Debug\Unity.TextMeshPro.pdb
+E:\Work work\Unity 3D\Work\Cubethon on Mobile\Temp\bin\Debug\UnityEditor.UI.pdb

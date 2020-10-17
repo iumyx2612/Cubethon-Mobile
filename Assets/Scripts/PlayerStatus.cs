@@ -19,7 +19,9 @@ public class PlayerStatus : MonoBehaviour
     void Update()
     {
         if(gameObject.transform.position.y <= -15)
-        {            
+        {
+            Instantiate(deathParticle, transform.position, Quaternion.identity);
+            Destroy(gameObject);
             FindObjectOfType<GameManager>().GameOver();
         }
     }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class GameManager : MonoBehaviour
 {
@@ -13,7 +14,7 @@ public class GameManager : MonoBehaviour
     public GameObject scoreText;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         Application.targetFrameRate = 60;
         Time.timeScale = 1f;
@@ -24,7 +25,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        GameStart();
+
     }
 
     public void EndGame()
@@ -48,21 +49,6 @@ public class GameManager : MonoBehaviour
         scoreText.SetActive(false);
         coinShowPanel.SetActive(false);
         gameOverPanel.SetActive(true);
-    }
-    
-    public void GameStart()
-    {
-        if(SceneManager.GetActiveScene().name == "Main Menu")
-        {
-            if (Input.touchCount > 0)
-            {
-                Touch touch = Input.GetTouch(0);
-                if (touch.phase == TouchPhase.Began)
-                {
-                    SceneManager.LoadScene("Main Scene");
-                }
-            }
-        }
+    }   
 
-    }
 }
