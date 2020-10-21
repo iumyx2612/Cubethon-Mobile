@@ -16,7 +16,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - 3D GUI
   - 
   - 
   - 
@@ -43,4 +43,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: UI
+    uniqueID: 4057741111
+    locked: 0
+  - name: 2nd Cam
+    uniqueID: 2844268973
     locked: 0

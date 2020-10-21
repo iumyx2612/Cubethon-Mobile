@@ -49,6 +49,10 @@ public class GameManager : MonoBehaviour
         scoreText.SetActive(false);
         coinShowPanel.SetActive(false);
         gameOverPanel.SetActive(true);
-    }   
+    }
 
+    //public void OnPointerDown(PointerEventData data)
+    //{
+    //    Debug.Log(data.pointerPress);
+    //}
 }

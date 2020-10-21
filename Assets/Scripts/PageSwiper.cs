@@ -7,10 +7,12 @@ public class PageSwiper : MonoBehaviour, IDragHandler, IEndDragHandler
 {
     private RectTransform rectTransform;
     [SerializeField]
-    private float left = 0, right = 0;
-    private float threshold = 0.3f;
+    private Vector3 panelPosition; // Vị trí của Panel;
+    private float threshold = 0.2f; // Threshold để khi swipe quá 1/3 panel thì sẽ chuyển sang panel mới
     [SerializeField]
-    private float distance = 800;
+    private float distance; // Khoảng cách giữa các Panel
+
+    private float easing = 0.5f; // How long in seconds we want our panel to ease into the location
 
     private void Awake()
     {
@@ -19,58 +21,59 @@ public class PageSwiper : MonoBehaviour, IDragHandler, IEndDragHandler
 
     private void Start()
     {
+        panelPosition = transform.localPosition;
+        // Set vị trí cho Panel Holder để luôn ở vị trí ban đầu 
         rectTransform.offsetMax = new Vector2(0, 0);
         rectTransform.offsetMin = new Vector2(0, 0);
+        distance = rectTransform.rect.width;
     }
 
     private void Update()
     {
+        //Somehow khi Drag thì Panel bị đổi top và bottom? Set top và bottom = 0
         rectTransform.offsetMax = new Vector2(rectTransform.offsetMax.x, 0);
         rectTransform.offsetMin = new Vector2(rectTransform.offsetMin.x, 0);
     }
 
     public void OnDrag(PointerEventData data)
-    {
-        float x_diff = data.pressPosition.x - data.position.x;
-        rectTransform.offsetMax = new Vector2(-right - x_diff, 0);
-        rectTransform.offsetMin = new Vector2(-left - x_diff, 0);
+    {     
+        float x_diff = data.pressPosition.x - data.position.x; // Khoảng cách giữa lúc tay chạm vào và hiện tại
+        // Set lại vị trí Left và Right của Rect Transform
+        transform.localPosition = panelPosition - new Vector3(x_diff, 0, 0);
     }
 
     public void OnEndDrag(PointerEventData data)
     {
-        //Why does it work, wtf is this????????????
-        //float x_diff = data.pressPosition.x - data.position.x;
-        //right = right + x_diff;
-        //Debug.Log("New Right: " + right);
-        //left = left + x_diff;
-        //Debug.Log("New Left: " + left);
-        //rectTransform.offsetMax = new Vector2(-right, 0);
-        //rectTransform.offsetMin = new Vector2(-left, 0);
-
-        float percentage = (data.pressPosition.x - data.position.x) / Screen.width;
-        if (Mathf.Abs(percentage) >= threshold)
+        float percentage = (data.pressPosition.x - data.position.x) / distance;
+        if(Mathf.Abs(percentage) > threshold)
         {
-            float new_left = left;
-            float new_right = right;
-            if (percentage >= 0)
+            Vector3 newLocation = panelPosition;
+            if (percentage < 0)
             {
-                new_left += distance;
-                new_right += distance;
+                newLocation += new Vector3(distance, 0, 0);
             }
-            else
+            else if(percentage > 0)
             {
-                new_left -= distance;
-                new_right -= distance;
+                newLocation += new Vector3(-distance, 0, 0);
             }
-            rectTransform.offsetMax = new Vector2(-new_right, 0);
-            rectTransform.offsetMin = new Vector2(-new_left, 0);
-            right = new_right;
-            left = new_left;
+            StartCoroutine(SmoothMove(transform.localPosition, newLocation, easing));
+            panelPosition = newLocation;
         }
         else
         {
-            rectTransform.offsetMax = new Vector2(-right, 0);
-            rectTransform.offsetMin = new Vector2(-left, 0);
+            StartCoroutine(SmoothMove(transform.localPosition, panelPosition, easing));
+        }
+    }
+
+    IEnumerator SmoothMove(Vector2 startPos, Vector2 endPos, float seconds)
+    {
+        float t = 0;
+        while(t <= 1)
+        {
+            t += Time.deltaTime / seconds;
+            rectTransform.offsetMax = Vector2.Lerp(startPos, endPos, Mathf.SmoothStep(0, 1, t));
+            rectTransform.offsetMin = Vector2.Lerp(startPos, endPos, Mathf.SmoothStep(0, 1, t));
+            yield return null;
         }
     }
 }

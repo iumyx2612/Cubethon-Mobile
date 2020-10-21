@@ -19,7 +19,7 @@ public class CoinData : MonoBehaviour
 
     private void Update()
     {
-        if(SceneManager.GetActiveScene().name != "Main Menu")
+        if(SceneManager.GetActiveScene().name != "Main Menu" && SceneManager.GetActiveScene().name != "Main Menu 1")
         {
             coinText.text = coinCounter.ToString();
             coinTextInPanel.text = coinCounter.ToString();
