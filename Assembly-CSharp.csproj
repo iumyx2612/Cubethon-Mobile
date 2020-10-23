@@ -62,7 +62,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\DrawRay.cs" />
+    <Compile Include="Assets\CharacterSelection.cs" />
+    <Compile Include="Assets\GUICam3D.cs" />
     <Compile Include="Assets\Scripts\AudioManager.cs" />
     <Compile Include="Assets\Scripts\CameraScript.cs" />
     <Compile Include="Assets\Scripts\Coin.cs" />
